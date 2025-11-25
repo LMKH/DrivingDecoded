@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+.github/
+
+# --- Virtual Environments ---
+env/
+env.py
+venv/
+.venv/
+ENV/
+
+blog/fixtures/
+
+.vscode/
+.idea/
+
+*.env
+.env
+.env.local
+.env.*.local
+
+# --- Django ---
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+temp/
+tmp/
+
+.DS_Store
+
+templates/account/
+templates/socialaccount/
+templates/openid/
+templates/mfa/
+templates/tests/
