@@ -29,9 +29,7 @@ blog/fixtures/
 *.pyc
 *.sqlite3
 db.sqlite3
-media/
 staticfiles/
-static/
 temp/
 tmp/
 
