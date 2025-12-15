@@ -1,0 +1,211 @@
+{% url 'home' as home_url %}
+{% load static %}
+
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+    <title>DrivingDecoded</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"> <img src="/static/images/DrivingDecoded Logo.png"
+                    alt="DrivingDecoded_logo" height="80"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <span class="navbar-text text-muted">
+                    Crack the Code. Pass the Test.
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-shrink-0 main-bg py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+
+                    {% block content %}
+
+                    <h1 class="mb-3">Welcome to DrivingDecoded</h1>
+                    <h2 class="mb-4 text-muted">Crack the Code. Pass the Test.</h2>
+
+                    <p class="lead mb-4">
+                        DrivingDecoded is designed to support learner drivers preparing for both
+                        their theory and practical driving tests.
+                    </p>
+
+                    <p class="mb-5">
+                        It provides a simple, user-friendly space where learners can document
+                        how their lessons are going and reflect on their progress.
+                    </p>
+
+                    <h3 class="mb-4 text-center">How DrivingDecoded Helps</h3>
+
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Document Your Journey</h5>
+                                    <p class="card-text">
+                                        Write down what you cover in each lesson, how you felt behind the wheel, and any
+                                        challenges you faced. Keeping a driving journal helps you remember key moments
+                                        and track your progress over time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">See Where You Can Improve</h5>
+                                    <p class="card-text">
+                                        Use simple dropdowns in each entry to highlight areas you are working on, such
+                                        as
+                                        manoeuvres, confidence, or road awareness. Spot patterns and focus your practice
+                                        where it matters most.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">See How Far You Have Come</h5>
+                                    <p class="card-text">
+                                        Look back at previous journal entries to see how much you have improved since
+                                        your
+                                        first lessons. Recognising your progress builds confidence and keeps you
+                                        motivated.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-5 mb-4">Why use DrivingDecoded?</h3>
+
+                    <div class="row g-4">
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Easy to Use</h5>
+                                    <p class="card-text">
+                                        Intuitive layout for learners — track lessons and progress without all the
+                                        confusion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Track Your Progress</h5>
+                                    <p class="card-text">
+                                        See how far you have come and identify areas to improve in one place.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Trusted Guidance</h5>
+                                    <p class="card-text">
+                                        Built around UK driving tests with reliable tips and official resources.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-5 mb-4">Helpful Resources</h3>
+
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <a href="https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency"
+                                class="btn btn-outline-secondary w-100 py-3">
+                                DVSA Guidance
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <a href="https://www.rac.co.uk/" class="btn btn-outline-secondary w-100 py-3">
+                                RAC Advice
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <a href="https://www.theaa.com/" class="btn btn-outline-secondary w-100 py-3">
+                                AA Guides
+                            </a>
+                        </div>
+                    </div>
+
+                    {% endblock content %}
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div>2025 DrivingDecoded</div>
+            <div class="mt-2 mt-md-0">Crack the Code. Pass the Test.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
