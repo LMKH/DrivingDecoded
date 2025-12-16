@@ -7,3 +7,7 @@ from .models import Post
 class PostList(generic.ListView):
     queryset = Post.objects.all()
     template_name = "base.html"
+
+
+def dashboard(request):
+    return render(request, "dashboard.html")

@@ -4,7 +4,7 @@
 
 ## DrivingDecoded - Crack the Code. Pass the Test.
 
-- Screenshot of Homepage
+![homepage](readme-assets/images/readme-homepage.png)
 
 ## View DrivingDecoded now on GitHub Pages
 
@@ -112,7 +112,13 @@ The website is designed for learner drivers who want a straightforward, easy-to-
 
 #### Fonts
 
+For simplicity, readability, and a uniform appearance across the application, the app uses the Arial sans serif font throughout. This choice ensures that text is easy to read on all devices and maintains a consistent style across pages.
+
 #### Themes
+
+The font colours are primarily black, with grey used occasionally for secondary text.
+
+The background is white, ensuring strong contrast with the text for easy readability.
 
 #### Logo
 
@@ -224,6 +230,13 @@ For this project, I planned the database structure carefully to support the onli
 I used **Miro** to create the board and organise the tables visually. I reviewed online examples and ChatGPT suggestions to make sure the tables included all necessary fields and that the data types were appropriate. For dropdowns like lesson ratings and improvement areas, I chose CharFields with predefined choices, which ensures that only valid options are stored.
 
 ### Agile Development
+
+Throughout development, I followed an **agile approach** to building the application:
+
+- After each push to GitHub or any set of changes, I reflected on how my progress toward completion had evolved.
+- I adapted future development steps based on these reflections, ensuring that each iteration aligned with the current state of the project.
+- New ideas were incorporated as they arose, and plans that no longer fit the project's direction were revised or removed.
+- This iterative process allowed the project to remain flexible, responsive, and focused on producing a functional, user-friendly application. 
 
 ### Deployment
 
