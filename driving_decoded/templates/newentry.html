@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add a New Journal Entry</h1>
+<p>Fill in your details below and save.</p>
+
+<form>
+    <!--lesson rating dropdown-->
+    <div class="mb-3">
+        <label for="lessonRating" class="form-label">Lesson Rating</label>
+        <select class="form-select" id="lessonRating">
+            <option selected disabled>Choose a rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+    </div>
+
+    <!--room for improvement dropdown-->
+    <div class="mb-3">
+        <label for="roomImprovement" class="form-label">Room for Improvement</label>
+        <select class="form-select" id="roomImprovement">
+            <option selected disabled>Choose an area</option>
+            <option value="steering">Steering</option>
+            <option value="mirrors">Mirrors</option>
+            <option value="junctions">Junctions</option>
+            <option value="signals">Signals</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!--text area-->
+    <div class="mb-3">
+        <label for="entryNotes" class="form-label">Notes</label>
+        <textarea class="form-control" id="entryNotes" rows="5" placeholder="Write your reflection..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Entry</button>
+</form>

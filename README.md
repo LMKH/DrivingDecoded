@@ -150,14 +150,13 @@ The **DrivingDecoded** logo was created using ***Canva AI***, allowing for a cle
 
 - **Python** - Backend logic and server-side programming.
 - **HTML5** - Structuring the web pages.
-- **CSS3** - Styling and layout.
 - **JavaScript** - Frontend interactivity and webpage responsiveness.
 
 #### Libraries and Frameworks
 
 - **Django** - Python web framework for backend development.
 - **PostgreSQL** - Relational database used for storing and managing user data.
-- **Bootstrap** - CSS framework for responsive and mobile-first design.
+- **Bootstrap CSS** - CSS framework for responsive and mobile-first design.
 
 ### Wireframes
 
