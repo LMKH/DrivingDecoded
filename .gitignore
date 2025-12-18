@@ -34,9 +34,3 @@ temp/
 tmp/
 
 .DS_Store
-
-templates/account/
-templates/socialaccount/
-templates/openid/
-templates/mfa/
-templates/tests/
