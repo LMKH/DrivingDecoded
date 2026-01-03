@@ -1,14 +1,10 @@
 # DrivingDecoded
 
----
-
 ## DrivingDecoded - Crack the Code. Pass the Test.
 
 ![homepage](readme-assets/images/readme-homepage.png)
 
-## View DrivingDecoded now on GitHub Pages
-
----
+## View DrivingDecoded now on Heorku
 
 ## Table of Contents
 
@@ -108,6 +104,19 @@ The website is designed for learner drivers who want a straightforward, easy-to-
 
 #### User Value
 
+DrivingDecoded is designed to provide learner drivers with a simple, structured way to reflect on their driving lessons and track their progress over time.
+
+**Key value to users includes:**
+
+- Structured reflection:
+    - Learner drivers can record lesson ratings, areas for improvement, and written reflections after each lesson, helping to reinforce learning and identify patterns over time.
+- Progress tracking:
+    - By reviewing previous journal entries, users can clearly see how their confidence and skills develop, providing motivation and reassurance throughout the learning process.
+- Personalised experience:
+    - Each user has a private dashboard where only their own entries are visible, creating a safe and focused space for reflection.
+- Support beyond lessons:
+    - The homepage provides quick access to trusted external resources, helping users continue learning outside of formal driving lessons.
+
 ### UX Design
 
 #### Fonts
@@ -133,6 +142,48 @@ The **DrivingDecoded** logo was created using ***Canva AI***, allowing for a cle
 ![DrivingDecodedFavicon](readme-assets/images/favicon.ico)
 
 ### Features
+
+**Homepage**
+
+- Welcoming landing page introducing DrivingDecoded
+- Clear call-to-action buttons for registration and login
+- Helpful external resources for learner drivers (e.g. DVSA, RAC)
+
+![homepage-mobile](readme-assets/images/homepage-mobile.png)
+
+**Journal Dashboard**
+
+- Secure, user-only dashboard accessible after login
+- Displays all journal entries created by the logged-in user
+- Greets users by username for a personalised experience
+
+![journaldash-mobile](readme-assets/images/journaldash-mobile.png)
+
+**Journal Entries (CRUD)**
+
+- Users can create new driving lesson journal entries
+- Entries include:
+    - Lesson rating
+    - Areas for improvement
+    - Written reflections
+- Users can edit or delete previous entries
+- Entries are ordered by most recent first
+
+![journalentry-mobile](readme-assets/images/journalentry-mobile.png)
+
+**User Authentication**
+
+- Secure user registration and login
+- Dashboard and journal entries are restricted to authenticated users
+- Navigation options adapt based on login status
+
+![userauth-mobile](readme-assets/images/userauth-mobile.png)
+
+**Responsive Design**
+
+- Mobile-first layout using Bootstrap
+- Cards and content adapted to smaller screens
+- Dashboard and homepage remain usable across devices
 
 ### Tools Used
 
@@ -239,9 +290,25 @@ Throughout development, I followed an **agile approach** to building the applica
 
 ### Deployment
 
+## View DrivingDecoded now on Heorku
+
+This project is deployed on Heroku. The Heroku app is connected to this GitHub repository and automatically deploys from the main branch.
+
 #### To GitHub
 
+1. Created a new GitHub repository.
+2. Initialised git in the local project folder.
+3. Added the remote repository and push the code.
+
+The GitHub repository stores the source code and is connected to Heroku for deployment.
+
 #### To Heroku
+
+1. Log in to Heroku and create a new app.
+2. In the Heroku dashboard, go to deploy.
+3. Select GitHub as the deployment method.
+4. Connect the app to the GitHub repository.
+5. I usually select manual deploy from the main branch, however you can select automatic deploys.
 
 ### AI Augmentation
 
@@ -250,6 +317,41 @@ Throughout development, I followed an **agile approach** to building the applica
 - ChatGPT
 - Canva AI
 
+**ChatGPT** was used as a learning and support tool throughout the development of this project. This was my first Django application, and AI assistance was used to help understand core concepts and best practices rather than generate a finished solution.
+
+ChatGPT was used to support:
+
+- Understanding Django project and app structure, including: 
+    - Views, models, templates, URLs, and forms
+    - How data flows between the database, views, and templates
+- Guidance on implementing **CRUD functionality** for journal entries:
+    - Creating new entries via forms
+    - Displaying user-specific data on a dashboard
+    - Editing and deleting entries securely
+    - Redirecting users appropriately after actions
+- Help with authentication-aware UI logic, such as:
+    - Showing dashboard links only when a user is logged in
+    - Displaying the logged-in user's username dynamically
+    - Restricting access to user-specific content
+- Assistance with Bootstrap-based layout and responsiveness, including:
+    - Structuring mobile-friendly layouts
+    - Using cards, buttons, and grid systems
+    - Improving spacing and visual hierarchy on the homepage and dashboard
+- Debugging common beginner issues, such as:
+    - Template inheritance errors
+    - URL reversing (i.e. NoReverseMatch)
+    - View and template connection issues
+    - Understanding error messages
+
+The **DrivingDecoded** logo was created using ***Canva AI***, allowing for a clean, sleek, distinctive design aligned with the website theme and brand.
+
+All code was written, tested, and integrated by myself, with ChatGPT acting as a guided support and learning aid throughout the build process.
+
 ### End Credits
 
+Created by Liam Kavanagh 2025
+
 #### Acknowledgements
+
+- The user authentication system (login, registration, and navigation bar) was **implemented** by following along with the official bootcamp-provided tutorial videos.
+- This foundation was then extended and adapted to support the custom journal dashboard and CRUD functionality used in this project.
