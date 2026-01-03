@@ -4,7 +4,7 @@
 
 ![homepage](readme-assets/images/readme-homepage.png)
 
-## View DrivingDecoded now on Heorku
+## [View DrivingDecoded now on Heorku](https://driving-decoded-ef5da982f589.herokuapp.com/)
 
 ## Table of Contents
 
@@ -45,13 +45,38 @@ The website is designed for learner drivers who want a straightforward, easy-to-
 
 #### Verifications
 
-##### HTML & CSS
+Google Lighthouse was used to test the performance, accessibility, best practices, and SEO of the application.
 
-##### Python
+The following pages were tested:
 
-##### Testing & Validation
+##### Lighthouse - Homepage
 
-##### Manual Testing
+![lighthouse-homepage](readme-assets/images/lighthouse-homepage.png)
+
+##### Lighthouse - Dash
+
+![lighthouse-dash](readme-assets/images/lighthouse-dash.png)
+
+##### Lighthouse - Journal Entry
+
+![lighthouse-entry](readme-assets/images/lighthouse-entry.png)
+
+All tested pages achieved a **full 100% score**, demonstrating strong performance, accessibility, and adherence to web best practices.
+
+##### Manual Testing & Validation
+
+Manual testing was carried out throughout development to ensure all features functioned as intended.
+
+The following functionality was manually tested:
+
+- User registration, login, and logout
+- Restricted access to the dashboard for authenticated users only
+- Creating, Reading, Updating, and Deleting (CRUD) journal entries
+- Form validation and redirects after successful submission
+- Navigation links and conditional navbar items
+- Responsive layout across different screen sizes
+
+All tested features behaved as expected.
 
 #### User Stories
 
@@ -63,11 +88,11 @@ The website is designed for learner drivers who want a straightforward, easy-to-
 - Fully functional and working links. 
 - User registration and login. 
 - Clear, concise, and easy-to-understand interface.
-- Notification of changes sent to the user.
 
 **Should Have:** 
 
 - Calming background colours and themes throughout.
+- Notification of changes sent to the user.
 
 **Could Have (Future Enhancements):** 
 
@@ -290,7 +315,7 @@ Throughout development, I followed an **agile approach** to building the applica
 
 ### Deployment
 
-## View DrivingDecoded now on Heorku
+## [View DrivingDecoded now on Heorku](https://driving-decoded-ef5da982f589.herokuapp.com/)
 
 This project is deployed on Heroku. The Heroku app is connected to this GitHub repository and automatically deploys from the main branch.
 
